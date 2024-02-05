@@ -6,22 +6,21 @@ export function Input({
     editable,
     fieldValue,
     onChangeText,
+    onEndEditing, // Adicionando onEndEditing
     keyType,
     maxLength
 
 }) {
 
-    return(
-
+    return (
         <InputText
-        placeholder={placeholder}
-        editable={editable}
-        keyboard={keyType}
-        maxLength={maxLength}
-        value={fieldValue}
-        onChangeText={onChangeText}
+            placeholder={placeholder}
+            editable={editable}
+            keyboard={keyType}
+            maxLength={maxLength}
+            value={fieldValue}
+            onChangeText={onChangeText}
+            onEndEditing={onEndEditing} // Adicionando onEndEditing
         />
-
-    )
-
+    );
 }

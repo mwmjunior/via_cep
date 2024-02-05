@@ -7,6 +7,6 @@ export const FieldContent = styled.View`
 
 
     /* define o valor da largura como o valor da props.fiedlWith*/
-    width: ${props => `${props.fieldWith}%`}
+    width: ${props => `${props.fieldWidth}%`}
 
 `

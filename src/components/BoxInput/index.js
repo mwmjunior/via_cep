@@ -3,40 +3,31 @@ import { Label } from "../Label/index"
 import { FieldContent } from "./style"
 
 export const BoxInput = ({
-
     fieldWidth = 100,
     editable = false,
     textLabel,
     placeholder, 
     fieldValue = null,
-    onchangeText = null,
+    onChangeText = null,
+    onEndEditing = null, // Adicionando onEndEditing
     KeyType = 'default',
-    maxLenght
+    maxLength 
+}) => {
+    return (
+        <FieldContent fieldWidth={fieldWidth}>
+            {/* Label */}
+            <Label textLabel={textLabel}/>
 
-}) =>{
-
-    return(
-
-            // FieldContent
-                // Label
-                // Input
-            //Label
-
-            <FieldContent fieldWidth={fieldWidth}>
-                {/* Label */}
-                <Label textLabel={textLabel}/>
-
-
-                {/* Input */}
-
-                <Input
+            {/* Input */}
+            <Input
                 placeholder={placeholder}
                 editable={editable}
                 KeyType={KeyType}
-                maxLenght={maxLenght}
+                maxLength={maxLength}
                 fieldValue={fieldValue}
-                onchangeText={onchangeText}
-                />
-            </FieldContent>
+                onChangeText={onChangeText}
+                onEndEditing={onEndEditing} // Adicionando onEndEditing
+            />
+        </FieldContent>
     )
 }
